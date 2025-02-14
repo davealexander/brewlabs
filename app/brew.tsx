@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import BrewCard from './Comonents/brewCard';
+import BrewCard from '../Components/brewCard';
 
 export default function Brew() {
   return (
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   brewTitle: {
+    paddingLeft: 16,
     fontSize: 24,
     fontWeight: 'bold',
   },

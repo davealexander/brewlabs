@@ -45,6 +45,7 @@ export default function Layout() {
           name="brew"
           options={{
             title: 'Brew',
+            headerShown: false
           }}
         />
         <Tabs.Screen

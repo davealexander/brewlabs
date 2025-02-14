@@ -6,15 +6,15 @@ export default function BrewCard() {
     const [isPressed, setIsPressed] = useState(false);
     
     return (
-        <Pressable style={styles.pressableCard} onPress={() => setIsPressed(!isPressed)}>
+        <Pressable style={styles.pressableCard}>
         <Ionicons name='beer' size={60} color='black' style={styles.brewPic} />
         <TouchableOpacity 
             style={[styles.cardInfo, 
-                    {backgroundColor: isPressed ? '#4CAF50' : '#00FFBF'}]}
+                {backgroundColor: isPressed ? '#4CAF50' : '#00FFBF'}]}
                     onPressIn={() => setIsPressed(true)}
                     onPressOut={() => setIsPressed(false)}
-        >   
-            <Text>Brew #1</Text>
+            >   
+            <Text style={styles.itemTitle}>Brew #1</Text>
             <Text>ABV: 4.5%</Text>
             <Text>Type: Pale Ale</Text>
             <Text>Created: 1/1/2023</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         margin: 16,
         width: '85%',
-        height: 105,
+        height: 110,
         borderWidth: 1,
         shadowOffset: {
             width: 0,
@@ -53,5 +53,9 @@ const styles = StyleSheet.create({
         paddingTop: 16,
         paddingLeft: 8
     },
-
+    itemTitle:{
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 4
+    },
 })
