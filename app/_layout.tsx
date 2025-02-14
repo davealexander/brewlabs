@@ -58,6 +58,7 @@ export default function Layout() {
           name="journal"
           options={{
             title: 'Journal',
+            headerShown: false
           }}
         />
         <Tabs.Screen
