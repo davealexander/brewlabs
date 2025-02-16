@@ -52,6 +52,7 @@ export default function Layout() {
           name="add"
           options={{
             title: 'Add',
+            headerShown: false
           }}
         />
         <Tabs.Screen
@@ -64,7 +65,7 @@ export default function Layout() {
         <Tabs.Screen
           name="profile"
           options={{
-            title: 'Profile', 
+            title: 'Profile',
             headerShown: false
           }}
         />

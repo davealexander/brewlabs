@@ -1,18 +1,18 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import JournalTile from '../Components/journalTile';
+import TileButton from '../Components/tileButton';
 
 export default function Journal() {
   return (
     <SafeAreaView>
       <Text style={styles.journalTitle}>Journals</Text>
-      <View style={styles.journalScrollView}>
-        <JournalTile title='Notes' />
-        <JournalTile title='Recipes' />
-        <JournalTile title='Ingredients' />
-        <JournalTile title='Tasting Ideas' />
-        <JournalTile title='Breweries' />
-        <JournalTile title='Brewing' />
+      <View style={styles.journalView}>
+        <TileButton title='Notes' />
+        <TileButton title='Recipes' />
+        <TileButton title='Ingredients' />
+        <TileButton title='Tasting Ideas' />
+        <TileButton title='Breweries' />
+        <TileButton title='Brewing' />
       </View>
     </SafeAreaView>
   );
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
-  journalScrollView: {
+  journalView: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
